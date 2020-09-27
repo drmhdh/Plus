@@ -5,13 +5,15 @@ import pymongo
 
 class Var(object):
     LOGGER = True
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    DEEPAI_KEY = os.environ.get("DEEPAI_KEY", None)
     APP_ID = int(os.environ.get("APP_ID", None))
     API_HASH = os.environ.get("API_HASH", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     STRING2 = os.environ.get("STRING2", None)
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
     OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
-    PRIVATE_GROUP_BOT_API_ID = os.environ.get("PRIVATE_GROUP_BOT_API_ID", None)
+    PRIVATE_GROUP_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
     if PRIVATE_GROUP_BOT_API_ID:
         PRIVATE_GROUP_BOT_API_ID = int(PRIVATE_GROUP_BOT_API_ID)
     PRIVATE_CHANNEL_BOT_API_ID = os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
