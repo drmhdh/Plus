@@ -11,7 +11,9 @@ class Var(object):
     API_HASH = os.environ.get("API_HASH", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     STRING2 = os.environ.get("STRING2", None)
-    PLUGIN_GROUP = int(os.environ.get("PLUGIN_GROUP", None))
+    PLUGIN_GROUP = os.environ.get("PLUGIN_GROUP", None)
+    if PLUGIN_GROUP:
+        PLUGIN_GROUP = int(PLUGIN_GROUP)
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
     OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
     PRIVATE_GROUP_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
