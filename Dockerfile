@@ -43,7 +43,8 @@ RUN apt-get install -y\
     megatools \
     libfreetype6-dev \
     procps \
-    policykit-1
+    policykit-1 \
+    tree
 
 RUN pip3 install --upgrade pip setuptools 
 RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
