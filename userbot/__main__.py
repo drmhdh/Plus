@@ -6,7 +6,7 @@ async def add_bot(bot_token):
 
 async def alt():
     LOGS.info("Connecting to telegram servers...")
-    if bot2:
+    if Var.STRING2:
         try:
             await bot2.start()
             LOGS.info("String 2 Connected")
