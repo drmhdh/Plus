@@ -19,10 +19,17 @@ class Var(object):
     PRIVATE_GROUP_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
     if PRIVATE_GROUP_BOT_API_ID:
         PRIVATE_GROUP_BOT_API_ID = int(PRIVATE_GROUP_BOT_API_ID)
+    PRIVATE_GROUP_ID = os.environ.get("BOTLOG_CHATID", None)
+    if PRIVATE_GROUP_ID:
+        PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
     PRIVATE_CHANNEL_BOT_API_ID = os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None)
     if PRIVATE_CHANNEL_BOT_API_ID:
         PRIVATE_CHANNEL_BOT_API_ID = int(PRIVATE_CHANNEL_BOT_API_ID)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/")
+    FIRST_NAME = os.environ.get("FIRST_NAME", None)
+    LAST_NAME = os.environ.get("LAST_NAME", None)
+    DEF_BIO = os.environ.get("DEF_BIO", None)
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/")
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     HASH_TO_TORRENT_API = os.environ.get("HASH_TO_TORRENT_API", "https://example.com/torrent/{}");
@@ -65,7 +72,7 @@ class Var(object):
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     MAX_FLOOD_IN_P_M_s = os.environ.get("MAX_FLOOD_IN_P_M_s", None)
     MONGO_URI = os.environ.get("MONGO_URI", None)
-    PM_LOGGR_BOT_API_ID = os.environ.get("PM_LOGGR_BOT_API_ID", None)
+    PM_LOGGR_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
     if PM_LOGGR_BOT_API_ID:
         PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
     TL_VID_STREAM_TYPES = ("MKV", "MP4", "WEBM")
