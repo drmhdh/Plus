@@ -1,5 +1,5 @@
 FROM kalilinux/kali-rolling
-RUN apt-get update && apt upgrade -y && apt-get install sudo -y
+#RUN apt-get update && apt upgrade -y && apt-get install sudo -y
 
 RUN apt-get install -y\
     coreutils \
