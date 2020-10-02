@@ -47,6 +47,7 @@ RUN apt-get install -y\
     libfreetype6-dev \
     procps \
     policykit-1 \
+    p7zip \
     tree
 
 RUN pip3 install --upgrade pip setuptools 
