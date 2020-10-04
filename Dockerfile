@@ -1,7 +1,4 @@
-FROM kalilinux/kali-rolling
-
-ARG DEBIAN_FRONTEND=noninteractive
-
+FROM python:3.8.6-slim-buster
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y
 
 RUN apt-get install -y\
@@ -50,15 +47,16 @@ RUN apt-get install -y\
     p7zip \
     tree
 
+
 RUN pip3 install --upgrade pip setuptools 
-RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
-RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
-RUN rm -r /root/.cache
+RUN pip3 install --upgrade pip install wheel 
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
 RUN wget https://chromedriver.storage.googleapis.com/84.0.4147.30/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
-RUN git clone https://github.com/amitsharma123234/Plus /root/userbot
+RUN git clone -b alpha https://github.com/buddhhu/Plus /root/userbot
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
 RUN chmod +x /usr/local/bin/*
-RUN pip3 install -r requirements.txt
+RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
+RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
 CMD ["python3","-m","userbot"]
+#© 2020 GitHub
