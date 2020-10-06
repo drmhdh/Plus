@@ -42,7 +42,7 @@ class Var(object):
     TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
     TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
     NO_LOG_P_M_S = bool(os.environ.get("NO_LOG_P_M_S", False))
-    TAGALERT = bool(os.environ.get("TAGALERT", True))
+    TAGALERT = bool(os.environ.get("TAGALERT", None))
     MAX_MESSAGE_SIZE_LIMIT = 4095
     UB_BLACK_LIST_CHAT = set(int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split())
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
