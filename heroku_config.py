@@ -42,6 +42,7 @@ class Var(object):
     TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
     TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
     NO_LOG_P_M_S = bool(os.environ.get("NO_LOG_P_M_S", False))
+    TAGALERT = bool(os.environ.get("TAGALERT", True))
     MAX_MESSAGE_SIZE_LIMIT = 4095
     UB_BLACK_LIST_CHAT = set(int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split())
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
@@ -70,7 +71,7 @@ class Var(object):
     MASTERS_MSG = os.environ.get("MASTERS_MSG", None)
     COUNTRY= str(os.environ.get("COUNTRY", ""))
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
-    MAX_FLOOD_IN_P_M_s = os.environ.get("MAX_FLOOD_IN_P_M_s", None)
+    MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", None))
     MONGO_URI = os.environ.get("MONGO_URI", None)
     PM_LOGGR_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
     if PM_LOGGR_BOT_API_ID:
